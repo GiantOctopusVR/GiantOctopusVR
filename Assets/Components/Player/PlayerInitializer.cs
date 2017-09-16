@@ -49,7 +49,7 @@ public class PlayerInitializer : MonoBehaviour {
 				Instantiate(PCPlayer);
 				break;
 			case GameController.GamePlatform.Vive:
-				Debug.Log("BUILD TOWER : IS A VIVE INSTANCE");
+				Debug.Log("BuiltTowerTest : IS A VIVE INSTANCE");
 				Instantiate(VivePlayer);
 				break;
 			case GameController.GamePlatform.Android:
