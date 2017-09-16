@@ -14,7 +14,7 @@ public class PlayerInitializer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		EventManager.StartListening("BuildTower", BuildTowerTest);
+		EventManager.StartListening(GameEvents.BuildTower, BuildTowerTest);
 
 		switch(GameController.Instance.currentPlatform)
 		{

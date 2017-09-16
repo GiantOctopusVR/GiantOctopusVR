@@ -26,7 +26,7 @@ public class BuildTowerNetworkManager : NetworkBehaviour {
 	[ClientRpc]
 	public void RpcBuildTower(BuildMessage message)
 	{
-		EventManager.TriggerEvent("BuildTower");
+		EventManager.TriggerEvent(GameEvents.BuildTower);
 		// builds tower at given location
 	}
 
