@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerInitializer : MonoBehaviour {
+public class PlayerInitializer : NetworkBehaviour {
 
 
 	public GameObject VivePlayer;
@@ -14,6 +15,11 @@ public class PlayerInitializer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
+		if(!isLocalPlayer)
+		{
+			return;
+		}
+
 		EventManager.StartListening(GameEvents.BuildTower, BuildTowerTest);
 		EventManager.StartListening(GameEvents.CityBoardLoaded, InitPlayerAfterCityIsLoaded);
 
@@ -25,7 +31,7 @@ public class PlayerInitializer : MonoBehaviour {
 				break;
 			case GameController.GamePlatform.Vive:
 				Debug.Log("THIS IS A VIVE INSTANCE");
-				Instantiate(VivePlayer);
+				CmdSpawnVive(gameObject);
 				break;
 			case GameController.GamePlatform.Android:
 				Debug.Log("THIS IS AN ANDROID INSTANCE");
@@ -58,7 +64,7 @@ public class PlayerInitializer : MonoBehaviour {
 				break;
 			case GameController.GamePlatform.Vive:
 				Debug.Log("BuiltTowerTest : IS A VIVE INSTANCE");
-				Instantiate(VivePlayer);
+				CmdSpawnVive( gameObject);
 				break;
 			case GameController.GamePlatform.Android:
 				Debug.Log("BUILD TOWER : IS AN ANDROID INSTANCE");
@@ -73,5 +79,10 @@ public class PlayerInitializer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	[Command] void CmdSpawnVive(GameObject player){
+		GameObject spawn = Instantiate (VivePlayer);
+		NetworkServer.SpawnWithClientAuthority (spawn, connectionToClient);
 	}
 }

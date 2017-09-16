@@ -61,8 +61,6 @@ GameObject:
   - component: {fileID: 33867215238865780}
   - component: {fileID: 65195216508093066}
   - component: {fileID: 23388090052813964}
-  - component: {fileID: 114410900994031946}
-  - component: {fileID: 114441779125693620}
   m_Layer: 0
   m_Name: RHand
   m_TagString: Untagged
@@ -336,59 +334,6 @@ MonoBehaviour:
   m_MovementThreshold: 0.001
   m_InterpolateRotation: 0.5
   m_InterpolateMovement: 0.5
---- !u!114 &114410900994031946
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1324618447732598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 102
-    i1: 195
-    i2: 58
-    i3: 5
-    i4: 20
-    i5: 252
-    i6: 187
-    i7: 132
-    i8: 41
-    i9: 196
-    i10: 212
-    i11: 246
-    i12: 78
-    i13: 166
-    i14: 132
-    i15: 105
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
---- !u!114 &114441779125693620
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1324618447732598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!114 &114456686257370984
 MonoBehaviour:
   m_ObjectHideFlags: 1

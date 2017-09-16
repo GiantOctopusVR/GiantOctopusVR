@@ -26,7 +26,6 @@ ExportedObj/
 /obj
 /Temp
 /Assets/GoogleVR/
-/Assets/Plugins/
 /Assets/GazeUI For Canvas/
 /Assets/VRSampleScenes/
 /Assets/VRStandardAsses/
@@ -92,6 +91,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-Assets/Network_Ryan.unity.meta
 octo.exe
 octo_Data/
