@@ -15,6 +15,12 @@ public class PlayerInitializer : NetworkBehaviour {
 	// Use this for initialization
 	void Start () {
 		
+		return;
+		if(!isLocalPlayer)
+		{
+			return;
+		}
+
 		EventManager.StartListening(GameEvents.BuildTower, BuildTowerTest);
 		EventManager.StartListening(GameEvents.CityBoardLoaded, InitPlayerAfterCityIsLoaded);
 

@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: 504769a398658b746bef5b7d152f4c03
+  - enabled: 1
+    path: Assets/Components/CityBoard/CityBoard.unity
+    guid: 2f1baa73ee8c4814292f48f3bae05f61
