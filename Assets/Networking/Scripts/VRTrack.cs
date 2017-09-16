@@ -13,8 +13,21 @@ public class VRTrack : NetworkBehaviour {
 	public GameObject NetL;
 	public GameObject NetR;
 
+	private GameController gameController;
+
 	// Use this for initialization
 	void Start () {
+		
+		var obj = GameObject.FindWithTag("GameController");
+
+		gameController = obj.GetComponent<GameController>();
+
+		if(gameController.currentPlatform != GameController.GamePlatform.Vive)
+		{
+			Destroy(this);
+			return;
+		}
+
 		VRH = GameObject.Find ("VRHead (eye)");
 		VRL = GameObject.Find ("VRLeft");
 		VRR = GameObject.Find ("VRRight");
