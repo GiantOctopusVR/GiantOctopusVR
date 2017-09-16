@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 4512b5f9d7a761247b3433caa5203f03
+timeCreated: 1505598748
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Frontage Condensed
+  fontNames:
+  - Frontage Condensed
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
