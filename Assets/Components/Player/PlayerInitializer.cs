@@ -15,7 +15,6 @@ public class PlayerInitializer : NetworkBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		return;
 		if(!isLocalPlayer)
 		{
 			return;
@@ -32,7 +31,7 @@ public class PlayerInitializer : NetworkBehaviour {
 				break;
 			case GameController.GamePlatform.Vive:
 				Debug.Log("THIS IS A VIVE INSTANCE");
-				CmdSpawn(VivePlayer, gameObject);
+				CmdSpawnVive(gameObject);
 				break;
 			case GameController.GamePlatform.Android:
 				Debug.Log("THIS IS AN ANDROID INSTANCE");
@@ -65,7 +64,7 @@ public class PlayerInitializer : NetworkBehaviour {
 				break;
 			case GameController.GamePlatform.Vive:
 				Debug.Log("BuiltTowerTest : IS A VIVE INSTANCE");
-				CmdSpawn(VivePlayer, gameObject);
+				CmdSpawnVive( gameObject);
 				break;
 			case GameController.GamePlatform.Android:
 				Debug.Log("BUILD TOWER : IS AN ANDROID INSTANCE");
@@ -82,8 +81,8 @@ public class PlayerInitializer : NetworkBehaviour {
 		
 	}
 
-	[Command] void CmdSpawn(GameObject obj, GameObject player){
-		GameObject spawn = Instantiate (obj);
+	[Command] void CmdSpawnVive(GameObject player){
+		GameObject spawn = Instantiate (VivePlayer);
 		NetworkServer.SpawnWithClientAuthority (spawn, player);
 	}
 }
