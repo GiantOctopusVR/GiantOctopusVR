@@ -35,7 +35,7 @@ public class VRTrack : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (isLocalPlayer)
+		if (hasAuthority)
 		{
 			if(VRH!=null)
 				NetH.transform.position = VRH.transform.position;
