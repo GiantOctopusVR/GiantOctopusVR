@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class VRTrack : NetworkBehaviour {
 
-	private GameObject VRH;
-	private GameObject VRL;
-	private GameObject VRR;
+	public GameObject VRH;
+	public GameObject VRL;
+	public GameObject VRR;
 
 	public GameObject NetH;
 	public GameObject NetL;
@@ -35,8 +35,18 @@ public class VRTrack : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
+
 		if (hasAuthority)
 		{
+			if(VRH == null)
+				VRH = GameObject.Find ("VRHead (eye)");
+			if(VRL == null)
+				VRL = GameObject.Find ("VRLeft");
+			if(VRR == null)
+				VRR = GameObject.Find ("VRRight");
+
 			if(VRH!=null)
 				NetH.transform.position = VRH.transform.position;
 			if(VRL!=null)

@@ -83,6 +83,6 @@ public class PlayerInitializer : NetworkBehaviour {
 
 	[Command] void CmdSpawnVive(GameObject player){
 		GameObject spawn = Instantiate (VivePlayer);
-		NetworkServer.SpawnWithClientAuthority (spawn, player);
+		NetworkServer.SpawnWithClientAuthority (spawn, connectionToClient);
 	}
 }
