@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManagaer : MonoBehaviour {
-  public GameObject settingsMenu;
+  public GameObject selectMenu;
+  public int SceneNum;
   // Use this for initialization
   void Start () {
 
@@ -14,21 +15,25 @@ public class MenuManagaer : MonoBehaviour {
   void Update () {
 
   }
-  public void loadScence(){
-    SceneManager.LoadScene(1);
-    Debug.Log("Loading Scence 1");
+  public void LoadScence2 (){
+    SceneManager.LoadScene(2);
+    Debug.Log("Loading Scence 2");
   }
-  public void buttonQuit(){
+  public void LoadScence3 (){
+    SceneManager.LoadScene(3);
+    Debug.Log("Loading Scence 3");
+  }
+  public void ButtonQuit(){
     Application.Quit();
     Debug.Log("Qutiting Application");
   }
-  public void openSettings(){
-    if(settingsMenu.active){
-      settingsMenu.SetActive(false);
+  public void OpenSelect(){
+    if(selectMenu.active){
+      selectMenu.SetActive(false);
       Debug.Log("Enabling");
     }
     else {
-      settingsMenu.SetActive(true);
+      selectMenu.SetActive(true);
       Debug.Log("Disabling");
     }
   }
