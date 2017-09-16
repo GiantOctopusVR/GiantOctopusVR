@@ -3,14 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum GameEvent
-{
-    StartGame,
-    GameOver,
-    ClientConnected,
-    ClientFailToConnect
-};
-
 public class EventManager : MonoBehaviour {
 
     private static EventManager _instance;

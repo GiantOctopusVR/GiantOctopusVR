@@ -15,6 +15,7 @@ public class PlayerInitializer : MonoBehaviour {
 	void Start () {
 		
 		EventManager.StartListening(GameEvents.BuildTower, BuildTowerTest);
+		EventManager.StartListening(GameEvents.CityBoardLoaded, InitPlayerAfterCityIsLoaded);
 
 		switch(GameController.Instance.currentPlatform)
 		{
@@ -37,8 +38,15 @@ public class PlayerInitializer : MonoBehaviour {
 		}
 
 		Debug.Log("Init correct player for the correct platform");
+		EventManager.TriggerEvent(GameEvents.PlayerInitialized);
 	}
 	
+
+	public void InitPlayerAfterCityIsLoaded()
+	{
+		Debug.Log("DO Stuff that depends on the city being loaded first - like placing the player with the board");
+		EventManager.StopListening(GameEvents.CityBoardLoaded, InitPlayerAfterCityIsLoaded);
+	}
 
 	public void BuildTowerTest()
 	{
