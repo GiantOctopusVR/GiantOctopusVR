@@ -5,20 +5,31 @@ using UnityEngine;
 
 public class VRTrack : NetworkBehaviour {
 
-	public GameObject obj;
+	private GameObject VRH;
+	private GameObject VRL;
+	private GameObject VRR;
+
+	public GameObject NetH;
+	public GameObject NetL;
+	public GameObject NetR;
 
 	// Use this for initialization
 	void Start () {
-		
+		VRH = GameObject.Find ("VRHead (eye)");
+		VRL = GameObject.Find ("VRLeft");
+		VRR = GameObject.Find ("VRRight");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (!isLocalPlayer)
+		if (isLocalPlayer)
 		{
-			return;
+			if(VRH!=null)
+				NetH.transform.position = VRH.transform.position;
+			if(VRL!=null)
+				NetL.transform.position = VRL.transform.position;
+			if(VRR!=null)
+				NetR.transform.position = VRR.transform.position;
 		}
-
-		transform.position = obj.transform.position;
 	}
 }
