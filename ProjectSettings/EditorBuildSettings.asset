@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Components/CityBoard/CityBoard.unity
     guid: 2f1baa73ee8c4814292f48f3bae05f61
+  - enabled: 1
+    path: Assets/Scenes/Network_Avery.unity
+    guid: b045f6f4a0a78fb42b6674b444562db4
+  - enabled: 1
+    path: Assets/Scenes/CityScape.unity
+    guid: 717ef085f9e97bb4cae5ec7e6fc44d3d
