@@ -24,7 +24,7 @@ public class VRTrack : NetworkBehaviour {
 
 		if(gameController.currentPlatform != GameController.GamePlatform.Vive)
 		{
-			Network.Destroy(GetComponent<NetworkView>().viewID);
+			//Network.Destroy(GetComponent<NetworkView>().viewID);
 			return;
 		}
 
