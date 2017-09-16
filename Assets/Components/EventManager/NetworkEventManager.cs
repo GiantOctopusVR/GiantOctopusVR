@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-public class NetworkEventManager : MonoBehaviour {
+public class NetworkEventManager : NetworkBehaviour {
 
 	[Command]
 	public void CmdTriggerEvent(string eventName)
