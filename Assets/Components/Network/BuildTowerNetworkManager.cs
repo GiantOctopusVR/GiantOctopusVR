@@ -20,12 +20,13 @@ public class BuildTowerNetworkManager : NetworkBehaviour {
 		
 
 		// call rpc method so that clients build the actual tower in their own game instance
-
+		RpcBuildTower(message);
 	}
 
 	[ClientRpc]
 	public void RpcBuildTower(BuildMessage message)
 	{
+		EventManager.TriggerEvent("BuildTower");
 		// builds tower at given location
 	}
 
