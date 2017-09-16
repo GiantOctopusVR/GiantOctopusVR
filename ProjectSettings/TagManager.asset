@@ -9,6 +9,10 @@ TagManager:
   - projectile
   - TeleportIgnore
   - VRHead
+  - Ground
+  - Node
+  - Nexus
+  - Enemy
   layers:
   - Default
   - TransparentFX
