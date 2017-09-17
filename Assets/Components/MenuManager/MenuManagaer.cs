@@ -33,4 +33,8 @@ public class MenuManagaer : MonoBehaviour {
   public void OpenSelect(){
 		SceneManager.LoadScene (SceneNum);
     }
+  
+  public void OpenGame (){
+		SceneManager.LoadScene(5);
+    }
   }
