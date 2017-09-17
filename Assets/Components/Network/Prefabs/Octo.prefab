@@ -1200,7 +1200,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4273542899078252}
-  - component: {fileID: 114343441933002456}
   - component: {fileID: 114064346033974162}
   m_Layer: 0
   m_Name: OctoDefender
@@ -3661,7 +3660,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1739190725061938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6730232, y: 17.938774, z: 19.446413}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4150550192418124}
@@ -5859,20 +5858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3156794ab6f1c90419ddea0bfb6c8e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114343441933002456
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1560762021224762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95e6fc5a1a349c146873fd397592e91c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  head: {fileID: 1020633789156424}
-  headoffset: 0.6
-  bodyoffset: 0.1
 --- !u!114 &114363489544452666
 MonoBehaviour:
   m_ObjectHideFlags: 1
