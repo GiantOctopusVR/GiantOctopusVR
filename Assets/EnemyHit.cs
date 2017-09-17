@@ -1,46 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Networking;
 
-public class EnemyHit : MonoBehaviour {
+public class EnemyHit : NetworkBehaviour
+{
 
         private float breakForce = 100f;
 
 
-        private void Start()
+        public override void OnStartServer()
         {
             GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider col)
         {
-            var collisionForce = GetCollisionForce(collision);
+            var collisionForce = GetCollisionForce(col);
 
+        //Destroy(gameObject, 0.05f);
             if (collisionForce > 100f)
             {
-                Destroy(gameObject, 0.05f);
+                var agent = gameObject.GetComponent<NavMeshAgent>();
+                agent.enabled = false;
+                gameObject.SetActive(false);
             }
-
         }
 
-        private float GetCollisionForce(Collision collision)
+        private float GetCollisionForce(Collider col)
         {
-            if (collision.gameObject.tag == "Player")
+            if (col.gameObject.tag == "Player")
             {
                 return 500f;
             }
 
-            if (collision.gameObject.tag == "Bullet")
+            if (col.gameObject.tag == "Bullet")
             {
                 return 500f;
             }
 
-            if (collision.gameObject.tag == "Laser")
+            if (col.gameObject.tag == "Laser")
             {
                 return 500f;
             }
 
-            if (collision.gameObject.tag == "Bat")
+            if (col.gameObject.tag == "Bat")
             {
                 return 500f;
             }
@@ -51,7 +56,8 @@ public class EnemyHit : MonoBehaviour {
 
         private void EnemyDestroy(float force)
         {
-            Destroy(gameObject, .05f);
-        }
+            //Destroy(gameObject, .05f);
+
+    }
 }
 

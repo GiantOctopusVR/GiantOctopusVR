@@ -2962,10 +2962,10 @@ MonoBehaviour:
       bendGoalWeight: 0
       swivelOffset: 0
     locomotion:
-      weight: 1
-      footDistance: 1.4
+      weight: 0.244
+      footDistance: 0.3
       stepThreshold: 1.51
-      angleThreshold: 7.57
+      angleThreshold: 6.17
       comAngleMlp: 1
       maxVelocity: 0.4
       velocityFactor: 0.4
