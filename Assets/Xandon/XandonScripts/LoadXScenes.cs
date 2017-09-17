@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnemyWaveSceneLoader : MonoBehaviour {
+public class LoadXScenes : MonoBehaviour
+{
 
     public string sceneWave;
     // Use this for initialization
     void Start()
     {
-        EventManager.StartListening(GameEvents.CityBoardLoaded, LoadEnemyWave);
-        //SceneManager.LoadScene("CityScape", LoadSceneMode.Additive);
+        //EventManager.StartListening(GameEvents.CityBoardLoaded, LoadEnemyWave);
+        SceneManager.LoadScene("CityScape", LoadSceneMode.Additive);
+        SceneManager.LoadScene("EnemyWave", LoadSceneMode.Additive);
     }
 
 
