@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Networking;
 
-public class PoolManager : MonoBehaviour {
-
+public class PoolManager : NetworkBehaviour { 
 	Dictionary<int,Queue<ObjectInstance>> poolDictionary = new Dictionary<int, Queue<ObjectInstance>> ();
 
 	static PoolManager _instance;
@@ -36,8 +36,11 @@ public class PoolManager : MonoBehaviour {
 			poolDictionary.Add (poolKey, new Queue<ObjectInstance> ());
 
 			for(int i = 0; i< poolSize; i++){
-				ObjectInstance newObject = new ObjectInstance (Instantiate (prefab) as GameObject);
-				poolDictionary [poolKey].Enqueue (newObject);
+
+                GameObject enemy = Instantiate(prefab) as GameObject;
+                NetworkServer.Spawn(enemy);
+                ObjectInstance newObject = new ObjectInstance (enemy);
+                poolDictionary [poolKey].Enqueue (newObject);
 				newObject.setParent (poolHolder.transform);
 			}
 		}

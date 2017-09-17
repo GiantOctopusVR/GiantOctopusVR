@@ -1,8 +1,9 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
+using UnityEngine.Networking;
 
-public class WaveSpawner : MonoBehaviour {
+public class WaveSpawner : NetworkBehaviour {
 
     //Tower defense code
     //public KeyCode spawnKey;
@@ -49,43 +50,48 @@ public class WaveSpawner : MonoBehaviour {
 		get { return state; }
 	}
 
-	void Start()
-	{
-        //nexus = GameObject.FindGameObjectWithTag("Nexus").transform;
-        if (spawnPoints.Length == 0)
-		{
-			Debug.LogError("No spawn points referenced.");
-		}
+    public override void OnStartServer()
+    {
+        if (isServer) {
+            //nexus = GameObject.FindGameObjectWithTag("Nexus").transform;
+            if (spawnPoints.Length == 0)
+            {
+                Debug.LogError("No spawn points referenced.");
+            }
 
-		waveCountdown = timeBetweenWaves;
+            waveCountdown = timeBetweenWaves;
+        }
 	}
 
 	void Update()
 	{
-		if (state == SpawnState.WAITING)
-		{
-			if (!EnemyIsAlive())
-			{
-				WaveCompleted();
-			}
-			else
-			{
-				WaveCompleted();
-				return;
-			}
-		}
+        if (isServer)
+        {
+            if (state == SpawnState.WAITING)
+            {
+                if (!EnemyIsAlive())
+                {
+                    WaveCompleted();
+                }
+                else
+                {
+                    WaveCompleted();
+                    return;
+                }
+            }
 
-		if (waveCountdown <= 0)
-		{
-			if (state != SpawnState.SPAWNING)
-			{
-				StartCoroutine( SpawnWave ( waves[nextWave] ) );
-			}
-		}
-		else
-		{
-			waveCountdown -= Time.deltaTime;
-		}
+            if (waveCountdown <= 0)
+            {
+                if (state != SpawnState.SPAWNING)
+                {
+                    StartCoroutine(SpawnWave(waves[nextWave]));
+                }
+            }
+            else
+            {
+                waveCountdown -= Time.deltaTime;
+            }
+        }
 	}
 
 	void WaveCompleted()
@@ -142,18 +148,5 @@ public class WaveSpawner : MonoBehaviour {
 		Transform _sp = spawnPoints[ Random.Range (0, spawnPoints.Length) ];
         float scale = (Random.Range(minScale, maxScale));
         PoolManager.instance.ReuseObject (_enemy, _sp.position, _sp.rotation, scale);
-        //var agent = _enemy.GetComponent<NavMeshAgent>();
-        //agent.SetDestination(nexus.position);
-        //Instantiate(prefab, _sp.position, _sp.rotation);
     }
-
-
-    //	void SpawnEnemy(GameObject _enemy)
-    //	{
-    //		Debug.Log("Spawning Enemy: " + _enemy.name);
-    //		Transform _sp = spawnPoints[ Random.Range (0, spawnPoints.Length) ];
-    //		PoolManager.instance.ReuseObject (prefab, _sp.position, _sp.rotation);
-    //		//Instantiate(prefab, _sp.position, _sp.rotation);
-    //	}
-    //
 }

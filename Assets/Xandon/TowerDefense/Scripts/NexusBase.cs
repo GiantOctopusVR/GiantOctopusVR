@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class NexusBase : MonoBehaviour {
     public int life;
-    public NetworkEventManager NetEventManager;
 	// Use this for initialization
 	void Start () {
 		
@@ -26,9 +25,6 @@ public class NexusBase : MonoBehaviour {
             var agent = other.gameObject.GetComponent<NavMeshAgent>();
             agent.enabled = false;
             other.gameObject.SetActive(false);
-            if (life <= 0){
-              NetEventManager.CmdTriggerEvent(GameEvents.EndGameEvent);
-            }
         }
     }
 }
