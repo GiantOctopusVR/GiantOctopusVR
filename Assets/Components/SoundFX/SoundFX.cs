@@ -2,6 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundFX : Singleton<SoundFX> {
+public class SoundFX : SingletonOct<SoundFX> {
 	public AudioClip audio1;
 }

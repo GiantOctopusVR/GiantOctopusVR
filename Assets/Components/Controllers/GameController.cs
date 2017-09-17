@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : Singleton<GameController> {
+public class GameController : SingletonOct<GameController> {
 
 	public enum GamePlatform {Vive, Android, iOS, PC, Hololens }
 	public GamePlatform currentPlatform;

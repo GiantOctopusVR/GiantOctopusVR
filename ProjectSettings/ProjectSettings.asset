@@ -278,6 +278,10 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Enabled: 0
     m_Devices: []
+  - m_BuildTarget: Metro
+    m_Enabled: 1
+    m_Devices:
+    - HoloLens
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   webPlayerTemplate: APPLICATION:Default
@@ -592,7 +596,12 @@ PlayerSettings:
   metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628,
     a: 1}
   metroSplashScreenUseBackgroundColor: 0
-  platformCapabilities: {}
+  platformCapabilities:
+    WindowsStoreApps:
+      InternetClient: True
+      Microphone: True
+      SpatialPerception: True
+      WebCam: True
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 
