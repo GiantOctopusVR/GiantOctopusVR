@@ -11,7 +11,6 @@ public class EnemyWaveSceneLoader : MonoBehaviour {
     {
         //EventManager.StartListening(GameEvents.CityBoardLoaded, LoadEnemyWave);
         SceneManager.LoadScene("CityScape", LoadSceneMode.Additive);
-        EventManager.TriggerEvent(GameEvents.EnemyWaveLoaded);
     }
 
 
