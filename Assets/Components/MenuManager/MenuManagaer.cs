@@ -1,17 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManagaer : MonoBehaviour {
   public GameObject selectMenu;
+  public GameObject startMenu;
   public int SceneNum;
   // Use this for initialization
   void Start () {
+   Debug.Log("Vim is awesome");
 
   }
-
-  // Update is called once per frame
+ // Update is called once per frame
   void Update () {
 
   }
@@ -28,13 +27,8 @@ public class MenuManagaer : MonoBehaviour {
     Debug.Log("Qutiting Application");
   }
   public void OpenSelect(){
-    if(selectMenu.active){
-      selectMenu.SetActive(false);
-      Debug.Log("Enabling");
-    }
-    else {
-      selectMenu.SetActive(true);
-      Debug.Log("Disabling");
+		selectMenu.SetActive(true);
+      startMenu.SetActive(false);
+
     }
   }
-}

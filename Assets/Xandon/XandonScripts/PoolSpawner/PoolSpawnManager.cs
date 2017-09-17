@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PoolSpawnManager : MonoBehaviour
+public class PoolSpawnManager : NetworkBehaviour
 {
 
     public GameObject prefab;
@@ -12,24 +13,26 @@ public class PoolSpawnManager : MonoBehaviour
 
 
     // Use this for initialization
-    void Start()
+    public override void OnStartServer()
     {
-        if (poolSize == 0)
-        {
-            poolSize = 5;
+        if (isServer) { 
+            if (poolSize == 0)
+            {
+                poolSize = 5;
+            }
+            PoolManager.instance.CreatePool(prefab, poolSize);
+            float scale = (Random.Range(minScale, maxScale));
         }
-        PoolManager.instance.CreatePool(prefab, poolSize);
-        float scale = (Random.Range(minScale, maxScale));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            float scale = (Random.Range(minScale, maxScale));
-            PoolManager.instance.ReuseObject(prefab, Vector3.zero, Quaternion.identity, scale);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    float scale = (Random.Range(minScale, maxScale));
+        //    PoolManager.instance.ReuseObject(prefab, Vector3.zero, Quaternion.identity, scale);
+        //}
 
     }
 }
