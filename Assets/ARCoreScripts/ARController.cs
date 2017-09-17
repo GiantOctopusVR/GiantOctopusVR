@@ -25,6 +25,7 @@ namespace GiantOctopusVR.ARController
     using UnityEngine.Rendering;
     using GoogleARCore;
     using GoogleARCore.HelloAR;
+    using UnityEngine.Networking;
 
     /// <summary>
     /// Controlls the GiantOctopusVR ARCore components.
@@ -47,6 +48,7 @@ namespace GiantOctopusVR.ARController
         //public GameObject m_andyAndroidPrefab;
 
         public GameObject worldObject;
+        public NetworkManager networkManager;
 
         /// <summary>
         /// A gameobject parenting UI for displaying the "searching for planes" snackbar.
@@ -149,6 +151,9 @@ namespace GiantOctopusVR.ARController
                 Debug.Log("bekitAR: Hit plane: " + hit.Plane);
                 worldObject.GetComponent<PlaneAttachment>().Attach(hit.Plane);
                 Debug.Log("bekitAR: Plane attachment: " +  worldObject.GetComponent<PlaneAttachment>());
+
+                Debug.Log("Connecting to network...");
+                networkManager.StartClient();
             }
         }
 
