@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class NexusBase : NetworkBehaviour
 {
     public int life;
+	public static bool win;
 
 
     private void OnTriggerEnter(Collider other)
@@ -19,6 +21,13 @@ public class NexusBase : NetworkBehaviour
             var agent = other.gameObject.GetComponent<NavMeshAgent>();
             agent.enabled = false;
             other.gameObject.SetActive(false);
+
+				
         }
+		if (life <= 0){
+			win = false;
+			SceneManager.LoadScene (7);
+
     }
+}
 }
