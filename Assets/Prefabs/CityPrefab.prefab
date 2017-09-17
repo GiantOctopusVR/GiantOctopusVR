@@ -17272,4 +17272,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 1744961005649036, guid: a2a47d2595c155747b4351c452fef917, type: 2}
-  UIText: {fileID: 0}
+  UIText: {fileID: 102108832483489036, guid: cef3ba1dc1f83d3469d92f995731a8c5, type: 2}
