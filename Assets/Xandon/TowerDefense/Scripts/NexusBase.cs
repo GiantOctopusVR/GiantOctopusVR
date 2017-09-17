@@ -2,18 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Networking;
 
-public class NexusBase : MonoBehaviour {
+public class NexusBase : NetworkBehaviour
+{
     public int life;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,10 +15,10 @@ public class NexusBase : MonoBehaviour {
         {
             life--;
             Debug.Log("collided with enemy");
-            //Destroy(other.gameObject);
-            //var agent = other.gameObject.GetComponent<NavMeshAgent>();
-            //agent.enabled = false;
-            //other.gameObject.SetActive(false);
+            ////Destroy(other.gameObject);
+            var agent = other.gameObject.GetComponent<NavMeshAgent>();
+            agent.enabled = false;
+            other.gameObject.SetActive(false);
         }
     }
 }
