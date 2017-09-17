@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: 706431a9f087f32499763134df37313a
+timeCreated: 1505621722
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 300
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline:
+    - - {x: -711, y: -288}
+      - {x: -712, y: -289}
+      - {x: -712, y: -309}
+      - {x: -694, y: -309}
+      - {x: -693, y: -308}
+      - {x: -693, y: -295}
+      - {x: -701, y: -288}
+    - - {x: -657, y: -90}
+      - {x: -646, y: -24}
+      - {x: -570, y: -49}
+      - {x: -531, y: -24}
+      - {x: -504, y: -18}
+      - {x: -482, y: -90}
+      - {x: -479, y: -262}
+      - {x: -474, y: -282}
+      - {x: -440, y: -282}
+      - {x: -370, y: -277}
+      - {x: -370, y: -262}
+      - {x: -402, y: -161}
+      - {x: -415, y: -149}
+      - {x: -440, y: -49}
+      - {x: -437, y: -45}
+      - {x: -441, y: -15}
+      - {x: -401, y: 13}
+      - {x: -330, y: 34}
+      - {x: -300, y: 70}
+      - {x: -290, y: 96}
+      - {x: -277, y: 154}
+      - {x: -277, y: 191}
+      - {x: -278, y: 215}
+      - {x: -330, y: 249}
+      - {x: -364, y: 292}
+      - {x: -402, y: 376}
+      - {x: -440, y: 378}
+      - {x: -462, y: 395}
+      - {x: -530, y: 364}
+      - {x: -564, y: 363}
+      - {x: -573, y: 377}
+      - {x: -575, y: 427}
+      - {x: -601, y: 465}
+      - {x: -631, y: 476}
+      - {x: -642, y: 476}
+      - {x: -666, y: 453}
+      - {x: -680, y: 408}
+      - {x: -677, y: 386}
+      - {x: -683, y: 348}
+      - {x: -768, y: 345}
+      - {x: -790, y: 359}
+      - {x: -842, y: 322}
+      - {x: -853, y: 253}
+      - {x: -901, y: 180}
+      - {x: -927, y: 155}
+      - {x: -927, y: 101}
+      - {x: -912, y: 62}
+      - {x: -892, y: 11}
+      - {x: -844, y: -21}
+      - {x: -795, y: -20}
+      - {x: -767, y: -17}
+      - {x: -730, y: 2}
+      - {x: -725, y: -31}
+      - {x: -715, y: -39}
+      - {x: -702, y: -113}
+      - {x: -695, y: -184}
+      - {x: -707, y: -195}
+      - {x: -710, y: -237}
+      - {x: -669, y: -241}
+      - {x: -655, y: -262}
+      - {x: -638, y: -277}
+      - {x: -636, y: -277}
+      - {x: -635, y: -276}
+      - {x: -633, y: -276}
+      - {x: -635, y: -278}
+      - {x: -636, y: -280}
+      - {x: -634, y: -282}
+      - {x: -618, y: -282}
+      - {x: -609, y: -278}
+      - {x: -631, y: -189}
+      - {x: -645, y: -177}
+    - - {x: -708, y: -237}
+      - {x: -709, y: -254}
+      - {x: -709, y: -268}
+      - {x: -707, y: -269}
+      - {x: -701, y: -267}
+      - {x: -690, y: -255}
+      - {x: -690, y: -251}
+      - {x: -702, y: -237}
+    - - {x: -779, y: -96}
+      - {x: -779, y: -133}
+      - {x: -773, y: -175}
+      - {x: -760, y: -175}
+      - {x: -760, y: -153}
+      - {x: -767, y: -98}
+      - {x: -769, y: -96}
+    - - {x: -744, y: -91}
+      - {x: -745, y: -95}
+      - {x: -745, y: -170}
+      - {x: -742, y: -171}
+      - {x: -706, y: -171}
+      - {x: -706, y: -111}
+      - {x: -712, y: -91}
+    - - {x: -617, y: -150}
+      - {x: -611, y: -159}
+      - {x: -601, y: -157}
+      - {x: -601, y: -79}
+      - {x: -641, y: -79}
+      - {x: -641, y: -137}
+      - {x: -635, y: -159}
+      - {x: -632, y: -160}
+      - {x: -625, y: -160}
+      - {x: -622, y: -157}
+      - {x: -622, y: -144}
+      - {x: -623, y: -135}
+    - - {x: -541, y: -104}
+      - {x: -542, y: -107}
+      - {x: -542, y: -120}
+      - {x: -540, y: -125}
+      - {x: -542, y: -125}
+      - {x: -543, y: -90}
+      - {x: -539, y: -101}
+      - {x: -538, y: -104}
+      - {x: -528, y: -103}
+      - {x: -526, y: -101}
+      - {x: -524, y: -79}
+      - {x: -536, y: -70}
+      - {x: -555, y: -70}
+      - {x: -559, y: -75}
+      - {x: -559, y: -113}
+      - {x: -553, y: -152}
+      - {x: -523, y: -152}
+      - {x: -523, y: -103}
+      - {x: -526, y: -103}
+    - - {x: -498, y: -67}
+      - {x: -507, y: -67}
+      - {x: -508, y: -68}
+      - {x: -508, y: -83}
+      - {x: -503, y: -146}
+      - {x: -490, y: -146}
+      - {x: -488, y: -144}
+      - {x: -488, y: -135}
+      - {x: -493, y: -69}
+    - - {x: -394, y: -56}
+      - {x: -427, y: -56}
+      - {x: -427, y: -101}
+      - {x: -419, y: -137}
+      - {x: -390, y: -137}
+      - {x: -386, y: -133}
+      - {x: -386, y: -126}
+      - {x: -392, y: -58}
+    - - {x: -365, y: -50}
+      - {x: -378, y: -55}
+      - {x: -378, y: -99}
+      - {x: -365, y: -131}
+      - {x: -345, y: -131}
+      - {x: -343, y: -130}
+      - {x: -339, y: -101}
+      - {x: -339, y: -50}
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
