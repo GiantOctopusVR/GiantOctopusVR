@@ -92,6 +92,7 @@ public class PoolManager : NetworkBehaviour {
 				poolObjectScript.OnObjectReuse ();
 			}
 
+			gameObject.SetActive(true);
 			RpcReuse(gameObject);
 			transform.position = position;
 			transform.rotation = rotation;
