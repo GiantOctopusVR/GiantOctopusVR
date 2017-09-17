@@ -22,9 +22,9 @@ public class NexusBase : MonoBehaviour {
             life--;
             Debug.Log("collided with enemy");
             //Destroy(other.gameObject);
-            var agent = other.gameObject.GetComponent<NavMeshAgent>();
-            agent.enabled = false;
-            other.gameObject.SetActive(false);
+            //var agent = other.gameObject.GetComponent<NavMeshAgent>();
+            //agent.enabled = false;
+            //other.gameObject.SetActive(false);
         }
     }
 }
