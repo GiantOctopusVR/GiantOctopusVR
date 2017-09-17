@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VivePlayer: {fileID: 1739190725061938, guid: 6810bd580206dab4bad38cbf81c78758, type: 2}
+  VivePlayer2: {fileID: 1739190725061938, guid: 6810bd580206dab4bad38cbf81c78758,
+    type: 2}
   PCPlayer: {fileID: 1485464002550264, guid: cfd8495f298409c4f8558941f682979e, type: 2}
   AndroidPlayer: {fileID: 1012915365930274, guid: d7a93b2b37e126e429b026056e05bd5b,
     type: 2}
