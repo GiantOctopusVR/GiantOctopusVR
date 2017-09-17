@@ -9,11 +9,14 @@ public class PoolManager : NetworkBehaviour {
 
 	static PoolManager _instance;
 
-    private Transform nexus;
+    public Transform nexus;
 
-    void Start()
+    public override void OnStartServer()
     {
-        nexus = GameObject.FindGameObjectWithTag("Nexus").transform;
+        //if (isServer)
+        //{
+        //    nexus = GameObject.FindGameObjectWithTag("Nexus").transform;
+        //}
     }
 
 

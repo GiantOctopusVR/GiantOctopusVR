@@ -7,6 +7,7 @@ public class PlayerInitializer : NetworkBehaviour {
 
 
 	public GameObject VivePlayer;
+	public GameObject VivePlayer2;
 	public GameObject PCPlayer;
 	public GameObject AndroidPlayer;
 
@@ -86,7 +87,12 @@ public class PlayerInitializer : NetworkBehaviour {
 	}
 
 	[Command] void CmdSpawnVive(GameObject player){
-		GameObject spawn = Instantiate (VivePlayer);
+		GameObject spawn;
+		if (GameObject.Find ("octo") != null) {
+			spawn = Instantiate (VivePlayer);
+		} else {
+			spawn = Instantiate (VivePlayer2);
+		}	
 		NetworkServer.SpawnWithClientAuthority (spawn, connectionToClient);
 	}
 }

@@ -365,13 +365,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4195507746762458}
   - component: {fileID: 95211594109730366}
-  - component: {fileID: 114379514097758734}
   - component: {fileID: 195400267042494690}
   - component: {fileID: 114770088562099566}
   - component: {fileID: 65199982191848258}
   - component: {fileID: 54976591026635118}
   - component: {fileID: 114490389263323976}
   - component: {fileID: 114432341261676930}
+  - component: {fileID: 114674254063769116}
   m_Layer: 0
   m_Name: Invader
   m_TagString: Enemy
@@ -1577,7 +1577,7 @@ Rigidbody:
   m_GameObject: {fileID: 1638983240061140}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 5
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1591,7 +1591,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1638983240061140}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1613,18 +1613,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114379514097758734
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1638983240061140}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1211e9c3a6f52e488896c69ca000ae8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeNewTarget: 2
 --- !u!114 &114432341261676930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1678,6 +1666,17 @@ MonoBehaviour:
     i15: 18
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
+--- !u!114 &114674254063769116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638983240061140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd614dd8b812c4a42b6641252d21465d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114770088562099566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1827,7 +1826,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 0.4
+  m_Speed: 0.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
