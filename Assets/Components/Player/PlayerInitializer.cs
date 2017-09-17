@@ -56,7 +56,7 @@ public class PlayerInitializer : NetworkBehaviour {
 
   public void EndGame() {
     // Handle End Game on all platforms
-    Debug.Log("Ending Game" );
+    Debug.Log("Ending Game");
   }
 	public void BuildTowerTest()
 	{
