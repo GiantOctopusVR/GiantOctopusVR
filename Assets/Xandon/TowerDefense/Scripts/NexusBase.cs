@@ -20,15 +20,13 @@ public class NexusBase : NetworkBehaviour
             ////Destroy(other.gameObject);
             var agent = other.gameObject.GetComponent<NavMeshAgent>();
             agent.enabled = false;
-            other.gameObject.SetActive(false);
-
-				
+            other.gameObject.SetActive(false);	
         }
-		if (life <= 0){
+        
+		if (life <= 0) {
 			win = false;
 			SceneManager.LoadScene (7);
-
+        }
     }
-}
 }
 	
