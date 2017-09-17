@@ -6808,7 +6808,7 @@ MonoBehaviour:
       bendGoalWeight: 0
       swivelOffset: 0
     locomotion:
-      weight: 0.244
+      weight: 1
       footDistance: 0.3
       stepThreshold: 1.51
       angleThreshold: 6.17
