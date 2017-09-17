@@ -5707,7 +5707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 1020633789156424}
-  headoffset: 0.8
+  headoffset: 1.2
   bodyoffset: 0.4
 --- !u!114 &114132253383115734
 MonoBehaviour:
