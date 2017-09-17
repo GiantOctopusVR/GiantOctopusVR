@@ -24,6 +24,7 @@ public class PlayerInitializer : NetworkBehaviour {
 		EventManager.StartListening(GameEvents.BuildTower, BuildTowerTest);
 		EventManager.StartListening(GameEvents.CityBoardLoaded, InitPlayerAfterCityIsLoaded);
 		EventManager.StartListening(GameEvents.EndGameEvent, EndGame);
+		
 		switch(GameController.Instance.currentPlatform)
 		{
 			case GameController.GamePlatform.PC:
