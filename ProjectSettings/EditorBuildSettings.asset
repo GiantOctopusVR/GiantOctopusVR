@@ -8,19 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/StartMenu.unity
     guid: 504769a398658b746bef5b7d152f4c03
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Network_Tiago.unity
     guid: 80594532c3374164eb626f35134510f9
   - enabled: 0
     path: Assets/Scenes/Network_Avery.unity
     guid: b045f6f4a0a78fb42b6674b444562db4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Components/CityBoard/CityBoard.unity
     guid: 2f1baa73ee8c4814292f48f3bae05f61
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CityScape.unity
     guid: 717ef085f9e97bb4cae5ec7e6fc44d3d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Components/EnemyWave/EnemyWave.unity
     guid: c6a3711a33d135843bfe848fac3e3d8b
   - enabled: 0
