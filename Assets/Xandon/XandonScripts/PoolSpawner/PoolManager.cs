@@ -79,13 +79,20 @@ public class PoolManager : NetworkBehaviour {
 			}
 		}
 
+
+		[ClientRpc]
+		public void RpcReuse(GameObject obj) 
+		{
+			obj.SetActive (true);
+		}
+
 		public void Reuse(Vector3 position, Quaternion rotation, float scale, Transform nexus) {
 
 			if (hasPoolObjectComponent) {
 				poolObjectScript.OnObjectReuse ();
 			}
 
-			gameObject.SetActive (true);
+			RpcReuse(gameObject);
 			transform.position = position;
 			transform.rotation = rotation;
             transform.localScale = new Vector3(scale, scale, scale);
