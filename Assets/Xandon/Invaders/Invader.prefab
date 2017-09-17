@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 54976591026635118}
   - component: {fileID: 114490389263323976}
   - component: {fileID: 114432341261676930}
+  - component: {fileID: 114674254063769116}
   m_Layer: 0
   m_Name: Invader
   m_TagString: Enemy
@@ -1665,6 +1666,17 @@ MonoBehaviour:
     i15: 18
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
+--- !u!114 &114674254063769116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638983240061140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd614dd8b812c4a42b6641252d21465d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114770088562099566
 MonoBehaviour:
   m_ObjectHideFlags: 1
