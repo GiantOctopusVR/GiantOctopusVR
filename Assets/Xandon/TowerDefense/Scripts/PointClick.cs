@@ -10,48 +10,52 @@ public class PointClick : MonoBehaviour {
     public float snapValue = 2;
     //public float depth = 0;
 
+    private GameController gameController;
+
     // Use this for initialization
     void Start () {
-
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-
-        var mouse = Input.mousePosition;
-        var temp = Camera.main.ScreenToWorldPoint(mouse);
-        temp.y = 0.5f;
-        transform.position = SnapPos(temp);
-
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (gameController.currentPlatform == GameController.GamePlatform.Vive)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.collider.tag.Equals("Ground"))
-                {
+            var mouse = Input.mousePosition;
+            var temp = Camera.main.ScreenToWorldPoint(mouse);
+            temp.y = 0.5f;
+            transform.position = SnapPos(temp);
 
-                    var pos = hit.point;
-                    pos.y = 0.5f;
-                    Instantiate(Node, SnapPos(pos), Quaternion.identity, parent);
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (hit.collider.tag.Equals("Ground"))
+                    {
+
+                        var pos = hit.point;
+                        pos.y = 0.5f;
+                        Instantiate(Node, SnapPos(pos), Quaternion.identity, parent);
+                    }
                 }
             }
-        }
 
-        if(Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
+            if (Input.GetKeyDown(KeyCode.Mouse1))
             {
-                if (hit.collider.tag.Equals("Node"))
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit))
                 {
-                    var pos = hit.point;
-                    pos.y = 1.5f;
-                    Instantiate(Turret, SnapPos(pos), Quaternion.identity, parent);
-                    //Destroy(hit.collider.gameObject);
+                    if (hit.collider.tag.Equals("Node"))
+                    {
+                        var pos = hit.point;
+                        pos.y = 1.5f;
+                        Instantiate(Turret, SnapPos(pos), Quaternion.identity, parent);
+                        //Destroy(hit.collider.gameObject);
+                    }
                 }
             }
         }
