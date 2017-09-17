@@ -55,25 +55,34 @@ public class VRTrack : NetworkBehaviour {
 			if(VRR == null)
 				VRR = GameObject.Find ("VRRight");
 
-			if(VRH!=null)
+			if (VRH != null) {
 				NetH.transform.position = VRH.transform.position;
-			if(VRL!=null)
+				NetH.transform.rotation = VRH.transform.rotation;
+			}
+			if (VRL != null) {
 				NetL.transform.position = VRL.transform.position;
-			if(VRR!=null)
+				NetL.transform.rotation = VRL.transform.rotation;
+			}
+			if (VRR != null) {
 				NetR.transform.position = VRR.transform.position;
-
+				NetR.transform.rotation = VRR.transform.rotation;
+			}
 			if (Lcontroller == null) {
 				Debug.Log ("Lcontroller not initialized");
-			} else if (Lcontroller.GetPressDown (triggerButton)) {
+			} else if (Lcontroller.GetPress (triggerButton)) {
 				Debug.Log ("Ltriggered");
 				GetComponent<laser> ().Lfire (true);
+			} else {
+				GetComponent<laser> ().Lfire (false);
 			}
 
 			if (Rcontroller == null) {
 				Debug.Log ("Rcontroller not initialized");
-			} else if (Rcontroller.GetPressDown (triggerButton)) {
+			} else if (Rcontroller.GetPress (triggerButton)) {
 				Debug.Log ("Rtriggered");
 				GetComponent<laser> ().Rfire (true);
+			} else {
+				GetComponent<laser> ().Rfire (false);
 			}
 
 		}
