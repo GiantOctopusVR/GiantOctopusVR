@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManagaer : MonoBehaviour {
   public GameObject selectMenu;
+  public GameObject startMenu;
   public int SceneNum;
   // Use this for initialization
   void Start () {
@@ -28,13 +29,8 @@ public class MenuManagaer : MonoBehaviour {
     Debug.Log("Qutiting Application");
   }
   public void OpenSelect(){
-    if(selectMenu.active){
-      selectMenu.SetActive(false);
-      Debug.Log("Enabling");
-    }
-    else {
       selectMenu.SetActive(true);
-      Debug.Log("Disabling");
+      startMenu.SetActive(false);
+
     }
   }
-}

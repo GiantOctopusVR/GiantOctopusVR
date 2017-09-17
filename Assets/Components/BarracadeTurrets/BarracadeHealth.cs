@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections; using System.Collections.Generic;
 using UnityEngine;
 
 public class BarracadeHealth : MonoBehaviour {
@@ -7,9 +6,8 @@ public class BarracadeHealth : MonoBehaviour {
   public GameObject fullBarrack;
   public GameObject lowBarrack;
   public GameObject colBarrack;
-	// Use this for initialization
-	void Start () {
-	   timeLeft = 20f;	
+	// Use this ftr initialization
+	void Start () { timeLeft = 20f;	
      colBarrack.SetActive(true);
 	}
 	
