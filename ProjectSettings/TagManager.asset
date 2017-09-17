@@ -13,6 +13,7 @@ TagManager:
   - Node
   - Nexus
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX

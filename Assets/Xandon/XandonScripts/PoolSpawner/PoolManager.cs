@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Networking;
 
-public class PoolManager : MonoBehaviour {
-
+public class PoolManager : NetworkBehaviour { 
 	Dictionary<int,Queue<ObjectInstance>> poolDictionary = new Dictionary<int, Queue<ObjectInstance>> ();
 
 	static PoolManager _instance;
 
-    private Transform nexus;
+    public Transform nexus;
 
-    void Start()
+    public override void OnStartServer()
     {
-        nexus = GameObject.FindGameObjectWithTag("Nexus").transform;
+        //if (isServer)
+        //{
+        //    nexus = GameObject.FindGameObjectWithTag("Nexus").transform;
+        //}
     }
 
 
@@ -36,8 +39,11 @@ public class PoolManager : MonoBehaviour {
 			poolDictionary.Add (poolKey, new Queue<ObjectInstance> ());
 
 			for(int i = 0; i< poolSize; i++){
-				ObjectInstance newObject = new ObjectInstance (Instantiate (prefab) as GameObject);
-				poolDictionary [poolKey].Enqueue (newObject);
+
+                GameObject enemy = Instantiate(prefab) as GameObject;
+                NetworkServer.Spawn(enemy);
+                ObjectInstance newObject = new ObjectInstance (enemy);
+                poolDictionary [poolKey].Enqueue (newObject);
 				newObject.setParent (poolHolder.transform);
 			}
 		}
@@ -76,13 +82,21 @@ public class PoolManager : MonoBehaviour {
 			}
 		}
 
+
+		[ClientRpc]
+		public void RpcReuse(GameObject obj) 
+		{
+			obj.SetActive (true);
+		}
+
 		public void Reuse(Vector3 position, Quaternion rotation, float scale, Transform nexus) {
 
 			if (hasPoolObjectComponent) {
 				poolObjectScript.OnObjectReuse ();
 			}
 
-			gameObject.SetActive (true);
+			gameObject.SetActive(true);
+			RpcReuse(gameObject);
 			transform.position = position;
 			transform.rotation = rotation;
             transform.localScale = new Vector3(scale, scale, scale);

@@ -7,6 +7,7 @@ public class PlayerInitializer : NetworkBehaviour {
 
 
 	public GameObject VivePlayer;
+	public GameObject VivePlayer2;
 	public GameObject PCPlayer;
 	public GameObject AndroidPlayer;
 
@@ -22,7 +23,7 @@ public class PlayerInitializer : NetworkBehaviour {
 
 		EventManager.StartListening(GameEvents.BuildTower, BuildTowerTest);
 		EventManager.StartListening(GameEvents.CityBoardLoaded, InitPlayerAfterCityIsLoaded);
-
+		EventManager.StartListening(GameEvents.EndGameEvent, EndGame);
 		switch(GameController.Instance.currentPlatform)
 		{
 			case GameController.GamePlatform.PC:
@@ -54,6 +55,10 @@ public class PlayerInitializer : NetworkBehaviour {
 		EventManager.StopListening(GameEvents.CityBoardLoaded, InitPlayerAfterCityIsLoaded);
 	}
 
+  public void EndGame() {
+    // Handle End Game on all platforms
+    Debug.Log("Ending Game");
+  }
 	public void BuildTowerTest()
 	{
 		switch(GameController.Instance.currentPlatform)
@@ -82,7 +87,12 @@ public class PlayerInitializer : NetworkBehaviour {
 	}
 
 	[Command] void CmdSpawnVive(GameObject player){
-		GameObject spawn = Instantiate (VivePlayer);
+		GameObject spawn;
+		if (GameObject.Find ("octo") != null) {
+			spawn = Instantiate (VivePlayer);
+		} else {
+			spawn = Instantiate (VivePlayer2);
+		}	
 		NetworkServer.SpawnWithClientAuthority (spawn, connectionToClient);
 	}
 }
