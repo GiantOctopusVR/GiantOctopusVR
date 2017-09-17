@@ -13,6 +13,10 @@ TagManager:
   - Node
   - Nexus
   - Enemy
+  - UIText
+  - Tower
+  - EventAnnouncer
+  - TurretSpawn
   layers:
   - Default
   - TransparentFX

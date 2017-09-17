@@ -41,6 +41,6 @@ public class SpatialManager : MonoBehaviour {
     private void instantiateCityOnTablePlane(GameObject plane)
     {
       GameObject city = Instantiate(cityPrefab, plane.transform.position, Quaternion.identity);
-        city.AddComponent<CityBuild>();
+      city.AddComponent<CityBuild>();
     }
 }

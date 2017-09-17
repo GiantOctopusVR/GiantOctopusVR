@@ -363,6 +363,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4270483487147586}
+  - component: {fileID: 114117626119293622}
   m_Layer: 0
   m_Name: City
   m_TagString: Untagged
@@ -4996,8 +4997,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1099222215564610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.42, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: -0.342, z: 0.406}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4623146147709758}
   - {fileID: 4338559527774696}
@@ -17299,6 +17300,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721604294892848}
   m_Mesh: {fileID: 4300418, guid: fe9b8f59b100cf0498f16f72af0c2562, type: 3}
+--- !u!114 &114117626119293622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1099222215564610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3554c99fd60cb45a8b4ef897690a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!208 &208021282107450642
 NavMeshObstacle:
   m_ObjectHideFlags: 1

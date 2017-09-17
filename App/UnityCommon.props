@@ -1,0 +1,9 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <UnityWSASolutionName>GiantOctopusVR</UnityWSASolutionName>
+        <UnityWSASolutionDir>C:\Users\bhara\Documents\GiantOctopusVR\App\</UnityWSASolutionDir>
+        <UnityProjectDir>C:\Users\bhara\Documents\GiantOctopusVR\</UnityProjectDir>
+        <UnityWSAPlayerDir>C:\Program Files\Unity56\Editor\Data\PlaybackEngines\MetroSupport\</UnityWSAPlayerDir>
+        <UnityWSAToolsDir>$(UnityWSASolutionDir)Unity\Tools\</UnityWSAToolsDir>
+    </PropertyGroup>
+</Project>

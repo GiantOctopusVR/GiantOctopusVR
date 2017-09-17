@@ -576,11 +576,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: GiantOctopusVR
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 8054f7496b4ed401
   metroApplicationDescription: GiantOctopusVR
   wsaImages: {}
   metroTileShortName: 
