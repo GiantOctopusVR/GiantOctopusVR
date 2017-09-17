@@ -7,8 +7,6 @@ public class TentacleWaker : MonoBehaviour {
 
 	void Start() {
 		animator = GetComponent<Animator>();
-		animator.SetBool("isRaised", true);
-		StartCoroutine(DoSomething());
 	}
 
 	void OnTriggerEnter(Collider other) {
@@ -24,11 +22,4 @@ public class TentacleWaker : MonoBehaviour {
 			animator.SetBool("isRaised", false);
 		}
     }
-
-	IEnumerator DoSomething()
-  {
-       yield return new WaitForSeconds(1);
-	animator.SetBool("isRaised", false);
-	   
-  }
 }
