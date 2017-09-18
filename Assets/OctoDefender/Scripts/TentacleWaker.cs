@@ -6,7 +6,8 @@ public class TentacleWaker : MonoBehaviour {
 	private Animator animator;
 
 	void Start() {
-		animator = GetComponent<Animator>();
+		//animator = GetComponent<Animator>();
+		animator = GetComponentInParent<Animator> ();
 	}
 
 	void OnTriggerEnter(Collider other) {
