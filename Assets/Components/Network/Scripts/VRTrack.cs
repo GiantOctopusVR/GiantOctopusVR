@@ -13,8 +13,6 @@ public class VRTrack : NetworkBehaviour {
 	public GameObject NetL;
 	public GameObject NetR;
 
-	private GameController gameController;
-
 	private Valve.VR.EVRButtonId triggerButton = Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger;
 	private SteamVR_TrackedObject LtrackedObj;
 	private SteamVR_Controller.Device Lcontroller { get { return SteamVR_Controller.Input ((int)LtrackedObj.index); } }
@@ -24,12 +22,7 @@ public class VRTrack : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-		var obj = GameObject.FindWithTag("GameController");
-
-		gameController = obj.GetComponent<GameController>();
-
-		if(gameController.currentPlatform != GameController.GamePlatform.Vive)
+		if(GameController.currentPlatform != GameController.GamePlatform.Vive)
 		{
 			//Network.Destroy(GetComponent<NetworkView>().viewID);
 			return;

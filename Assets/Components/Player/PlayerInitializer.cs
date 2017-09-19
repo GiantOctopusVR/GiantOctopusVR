@@ -25,7 +25,7 @@ public class PlayerInitializer : NetworkBehaviour {
 		EventManager.StartListening(GameEvents.CityBoardLoaded, InitPlayerAfterCityIsLoaded);
 		EventManager.StartListening(GameEvents.EndGameEvent, EndGame);
 		
-		switch(GameController.Instance.currentPlatform)
+		switch(GameController.currentPlatform)
 		{
 			case GameController.GamePlatform.PC:
 				Debug.Log("THIS IS A PC INSTANCE");
@@ -62,7 +62,7 @@ public class PlayerInitializer : NetworkBehaviour {
   }
 	public void BuildTowerTest()
 	{
-		switch(GameController.Instance.currentPlatform)
+		switch(GameController.currentPlatform)
 		{
 			case GameController.GamePlatform.PC:
 				Debug.Log("BUILD TOWER : IS A PC INSTANCE");
