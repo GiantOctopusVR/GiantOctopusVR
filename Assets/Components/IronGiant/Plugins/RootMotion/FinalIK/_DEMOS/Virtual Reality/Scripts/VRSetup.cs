@@ -48,7 +48,7 @@ namespace RootMotion.Demos {
 				// Activate the mirrors
 				foreach (GameObject g in enableOnR) g.SetActive(true);
 				
-				InputTracking.Recenter();
+				UnityEngine.XR.InputTracking.Recenter();
 				
 				text.gameObject.SetActive(false);
 				
