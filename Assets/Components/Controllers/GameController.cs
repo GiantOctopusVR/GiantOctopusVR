@@ -15,10 +15,7 @@ public class GameController : Singleton<GameController> {
         Debug.Log("Android detected, setting game platform...");
         currentPlatform = GamePlatform.Android;
 #endif
-    }
-
-    void Start()
-    {
+    
         // Android specific settings
         if (currentPlatform == GamePlatform.Android)
         {
