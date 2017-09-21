@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class GameController : Singleton<GameController> {
     public enum GamePlatform {Vive, Android, iOS, PC, Hololens }
     public static GamePlatform currentPlatform;
     public static GameObject worldObject;
+    public NetworkManager networkManager;
 
     public GameObject[] disableARCoreObjects;
     public GameObject[] enableARCoreObjects;
+    public GameObject removeARCoreSpawnObject;
 
     void Awake () {
 #if UNITY_ANDROID
@@ -32,6 +35,10 @@ public class GameController : Singleton<GameController> {
                 Debug.Log("Enabling object: " + enableARCoreObject.name);
                 enableARCoreObject.SetActive(true);
             }
+
+            // Disable Invader
+            // TODO: Enable this again once we fix network positioning
+            networkManager.spawnPrefabs.Remove(removeARCoreSpawnObject);
         }
     }
 }
