@@ -7,9 +7,9 @@ using UnityEngine.Networking;
 public class ARSetParent : MonoBehaviour {
     private void Start()
     {
-        if (GameController.currentPlatform == GameController.GamePlatform.Android)
+        if (GameController.Instance.currentPlatform == GameController.GamePlatform.Android)
         {
-            transform.SetParent(GameController.worldObject.transform, false);
+            transform.SetParent(GameController.Instance.worldObject.transform, false);
         }
     }
 }

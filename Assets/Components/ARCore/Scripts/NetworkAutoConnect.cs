@@ -8,7 +8,7 @@ public class NetworkAutoConnect : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (GameController.currentPlatform == GameController.GamePlatform.Android)
+        if (GameController.Instance.currentPlatform == GameController.GamePlatform.Android)
         {
             Debug.Log("Auto connecting to server: " + networkManager.networkAddress);
             networkManager.StartClient();

@@ -22,7 +22,7 @@ public class VRTrack : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(GameController.currentPlatform != GameController.GamePlatform.Vive)
+		if(GameController.Instance.currentPlatform != GameController.GamePlatform.Vive)
 		{
 			//Network.Destroy(GetComponent<NetworkView>().viewID);
 			return;

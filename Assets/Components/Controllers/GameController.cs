@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class GameController : Singleton<GameController> {
+    protected GameController() { } // guarantee this will be always a singleton only
+
     public enum GamePlatform {Vive, Android, iOS, PC, Hololens }
-    public static GamePlatform currentPlatform;
-    public static GameObject worldObject;
+    public GamePlatform currentPlatform;
+    public GameObject worldObject;
     public NetworkManager networkManager;
 
     public GameObject[] disableARCoreObjects;

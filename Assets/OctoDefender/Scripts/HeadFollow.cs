@@ -24,7 +24,7 @@ public class HeadFollow : MonoBehaviour {
 		if (head) {
             float h_scale;
 
-            if (GameController.currentPlatform == GameController.GamePlatform.Android)
+            if (GameController.Instance.currentPlatform == GameController.GamePlatform.Android)
             {
                 // Don't scale on the Android client
                 h_scale = 1.0f;
