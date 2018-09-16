@@ -13,23 +13,38 @@ public class VRTrack : NetworkBehaviour {
 	public GameObject NetL;
 	public GameObject NetR;
 
-	private GameController gameController;
-
 	private Valve.VR.EVRButtonId triggerButton = Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger;
 	private SteamVR_TrackedObject LtrackedObj;
-	private SteamVR_Controller.Device Lcontroller { get { return SteamVR_Controller.Input ((int)LtrackedObj.index); } }
+	private SteamVR_Controller.Device Lcontroller {
+        get {
+            if (LtrackedObj != null)
+            {
+                return SteamVR_Controller.Input((int)LtrackedObj.index);
+            } else
+            {
+                return null;
+            }
+        }
+    }
 
 	private SteamVR_TrackedObject RtrackedObj;
-	private SteamVR_Controller.Device Rcontroller { get { return SteamVR_Controller.Input ((int)RtrackedObj.index); } }
-
-	// Use this for initialization
-	void Start () {
-		
-		var obj = GameObject.FindWithTag("GameController");
-
-		gameController = obj.GetComponent<GameController>();
-
-		if(gameController.currentPlatform != GameController.GamePlatform.Vive)
+    private SteamVR_Controller.Device Rcontroller
+    {
+        get
+        {
+            if (RtrackedObj != null)
+            {
+                return SteamVR_Controller.Input((int)RtrackedObj.index);
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
+    // Use this for initialization
+    void Start () {
+		if(GameController.Instance.currentPlatform != GameController.GamePlatform.Vive)
 		{
 			//Network.Destroy(GetComponent<NetworkView>().viewID);
 			return;
@@ -68,7 +83,7 @@ public class VRTrack : NetworkBehaviour {
 				NetR.transform.rotation = VRR.transform.rotation;
 			}
 			if (Lcontroller == null) {
-				Debug.Log ("Lcontroller not initialized");
+				//Debug.Log ("Lcontroller not initialized");
 			} else if (Lcontroller.GetPress (triggerButton)) {
 				Debug.Log ("Ltriggered");
 				GetComponent<laser> ().Lfire (true);
@@ -77,7 +92,7 @@ public class VRTrack : NetworkBehaviour {
 			}
 
 			if (Rcontroller == null) {
-				Debug.Log ("Rcontroller not initialized");
+				//Debug.Log ("Rcontroller not initialized");
 			} else if (Rcontroller.GetPress (triggerButton)) {
 				Debug.Log ("Rtriggered");
 				GetComponent<laser> ().Rfire (true);

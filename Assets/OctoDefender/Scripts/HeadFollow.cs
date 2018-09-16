@@ -22,7 +22,17 @@ public class HeadFollow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (head) {
-			float h_scale = head.transform.position.y / h;
+            float h_scale;
+
+            if (GameController.Instance.currentPlatform == GameController.GamePlatform.Android)
+            {
+                // Don't scale on the Android client
+                h_scale = 1.0f;
+            }
+            else
+            {
+                h_scale = head.transform.position.y / h;
+            }
 
 			transform.position = new Vector3 (head.transform.position.x, head.transform.position.y - (headoffset*h_scale), head.transform.position.z);
 			transform.position = transform.position - (head.transform.forward) * bodyoffset;

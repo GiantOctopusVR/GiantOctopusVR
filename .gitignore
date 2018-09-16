@@ -29,6 +29,7 @@ ExportedObj/
 /Assets/GazeUI For Canvas/
 /Assets/VRSampleScenes/
 /Assets/VRStandardAsses/
+.vs
 
 # Unity3D generated meta files
 *.pidb.meta
